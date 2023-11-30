@@ -1,0 +1,40 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch 2023",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/2023/target/debug/adventofcode.exe",
+      "args": [
+        "${input:day}",
+        "${input:mode}"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/2023",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "build"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "day",
+      "description": "Which day to run.",
+      "type": "promptString",
+    },
+    {
+      "id": "mode",
+      "description": "How do you want to start the program?",
+      "type": "pickString",
+      "default": "Test",
+      "options": [
+        "normal",
+        "test"
+      ]
+    }
+  ]
+}
