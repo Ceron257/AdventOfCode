@@ -2,8 +2,10 @@ use crate::utility::read_input;
 use crate::ExecutionMode;
 
 use day1::day1;
+use day2::day2;
 
 pub mod day1;
+pub mod day2;
 
 fn load_input(day: &String, mode: &ExecutionMode) -> Vec<String> {
     let suffix = match mode {
@@ -28,6 +30,7 @@ pub fn execute_day(day: String, mode: ExecutionMode) {
 
     match day.as_str() {
         "1" => day1(input),
+        "2" => day2(input),
         _ => {
             panic!("Day {day} does not (yet) exist.")
         }
