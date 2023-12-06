@@ -5,11 +5,13 @@ use day1::day1;
 use day2::day2;
 use day3::day3;
 use day4::day4;
+use day5::day5;
 
 pub mod day1;
 pub mod day2;
 pub mod day3;
 pub mod day4;
+pub mod day5;
 
 fn load_input(day: &String, mode: &ExecutionMode) -> Vec<String> {
     let suffix = match mode {
@@ -37,6 +39,7 @@ pub fn execute_day(day: String, mode: ExecutionMode) {
         "2" => day2(input),
         "3" => day3(input),
         "4" => day4(input),
+        "5" => day5(input),
         _ => {
             panic!("Day {day} does not (yet) exist.")
         }
