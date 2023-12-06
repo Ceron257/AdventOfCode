@@ -16,12 +16,13 @@ fn parse_number(input: &String) -> Option<usize> {
         .parse::<usize>()
         .ok()
 }
+
 fn compute_number_of_wins(time: usize, distance: usize) -> usize {
     /*
      * We want to intersect `time * (time - t)` with `distance`.
      * The maximum will be reached at `time / 2.` and the intersection
      * points have the same distance to the maximum for symmetry reasons.
-     * 
+     *
      * So we can look for the first intersection point and then calculate
      * calculate the number of ways to win from that.
      */
