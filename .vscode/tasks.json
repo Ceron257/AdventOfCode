@@ -8,7 +8,7 @@
         "cwd": "${workspaceFolder}/2023"
       },
       "problemMatcher": [
-        "$rustc"
+        {"fileLocation":["relative", "${workspaceFolder}/2023"], "base": "$rustc"}
       ],
       "group": {
         "kind": "build",
