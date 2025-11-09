@@ -1,6 +1,5 @@
 use std::env;
 use aocutils::utility::parse_execution_mode;
-
 pub mod days;
 
 pub fn run() {

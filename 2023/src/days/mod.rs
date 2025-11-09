@@ -1,5 +1,4 @@
-use crate::utility::read_input;
-use crate::ExecutionMode;
+use aocutils::{load_input, ExecutionMode};
 
 use day1::day1;
 use day2::day2;
@@ -16,23 +15,6 @@ pub mod day4;
 pub mod day5;
 pub mod day6;
 pub mod day7;
-
-fn load_input(day: &String, mode: &ExecutionMode) -> Vec<String> {
-    let suffix = match mode {
-        ExecutionMode::Normal => "",
-        ExecutionMode::Test => "-test",
-    };
-
-    let input_path = format!("inputs/day-{day}{suffix}.txt");
-    let input = read_input(input_path);
-
-    if input.is_err() {
-        let error = input.err().unwrap();
-        panic!("Failed to read input: {error}");
-    }
-
-    input.unwrap()
-}
 
 pub fn execute_day(day: String, mode: ExecutionMode) {
     println!("Running {day} with {mode:?}");
